@@ -1,59 +1,27 @@
 # ribbon.js
 
-> Only 1kb javascript gist to generate a **ribbon** in your website with HTML5 canvas. Code from [evanyou](http://evanyou.me/).
+this is a fork from `https://github.com/hustcc/ribbon.js`, add support for node.
 
-![travis-ci](https://travis-ci.org/hustcc/ribbon.js.svg?branch=master)
-
-
-## 1. usage
+## usage
 
 Very easy and simple.
 
-insert the code below `between <body> and </body>`.
-
-```html
-<script src="dist/ribbon.min.js"></script>
+```bash
+yarn add @jiangtj/ribbon.js
 ```
 
-Suggest before the tag `</body>`, like below:
+```js
+import ribbon from '@jiangtj/ribbon.js';
 
-```html
-<html>
-<head>
-	...
-</head>
-<body>
-	...
-	...
-	...
-	<script src="dist/ribbon.min.js"></script>
-</body>
-</html>
+// use
+ribbon()
+// or
+ribbon({
+  z: -1, // z-index
+  a: 0.6, // alpha
+  s: 90, // size
+  target: 'body'
+})
 ```
 
-
-`Please do not add the code in the <head> </head>`. then ok!
-
-
-## 2. config
-
- - **`size`**: the size of ribbon, default: **`90`**.
- - **`alpha`**: the opacity of line (0 ~ 1), default: **`0.6`**.
- - **`zIndex`**: the index of z space, default: **`-1`**.
-
-Example:
-
-```html
-<script type="text/javascript" size="150" alpha='0.3' zIndex="-2" src="dist/ribbon.min.js"></script>
-```
-
-Set the config on the script node `as a attribute`. all the config has the default value, you can choose to set any of them, or none of them.
-
-
-## 3. preview
-
-![screenshot](res/screenshot.png)
-
-## 4. other
-
-The project source comes from [http://evanyou.me/](http://evanyou.me/).
+If you use vue, `Please add it in mounted()`.

@@ -35,5 +35,8 @@
     "build": "gulp mini && npm run test"
   },
   "dependencies": {
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }

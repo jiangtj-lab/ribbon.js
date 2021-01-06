@@ -1,6 +1,5 @@
 {
-  "name": "ribbon.js",
-  "officialName": "ribbon.js",
+  "name": "@jiangtj/ribbon.js",
   "version": "1.0.2",
   "summary": "only 1kb javascript gist to generate a ribbon in your website with HTML5 canvas.",
   "description": "only 1kb javascript gist to generate a ribbon in your website with HTML5 canvas.",
@@ -15,7 +14,7 @@
     "html5",
     "ribbon"
   ],
-  "main": "dist/ribbon.js",
+  "main": "src/ribbon.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/hustcc/ribbon.js"

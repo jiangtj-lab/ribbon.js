@@ -5,19 +5,16 @@
  * GitHub: https://github.com/hustcc/ribbon.js
 **/
 /*jshint -W030 */
-! function() {
+module.exports = function(options) {
   function attr(node, attr, default_value) {
     return Number(node.getAttribute(attr)) || default_value;
   }
 
-  // get user config
-  var scripts = document.getElementsByTagName('script'),
-    script = scripts[scripts.length - 1]; // 当前加载的script
-  config = {
-    z: attr(script, "zIndex", -1), // z-index
-    a: attr(script, "alpha", 0.6), // alpha
-    s: attr(script, "size", 90), // size
-  };
+  let config = Object.assign({
+    z: -1, // z-index
+    a: 0.6, // alpha
+    s: 90, // size
+  }, options);
 
   var canvas = document.createElement('canvas'),
     g2d = canvas.getContext('2d'),
@@ -65,4 +62,4 @@
   document.onclick = redraw;
   document.ontouchstart = redraw;
   redraw();
-}();
+};
